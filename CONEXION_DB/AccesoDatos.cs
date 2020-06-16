@@ -17,7 +17,7 @@ namespace CONEXION_DB
 
         public AccesoDatos()
         {
-            Conexion = new SqlConnection("data source = Paprika\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi");
+            Conexion = new SqlConnection("data source = Paprika\\SQLEXPRESS; initial catalog = REVOLLO_DB; integrated security = sspi");
             Comando = new SqlCommand();
             Comando.Connection = Conexion;
         }

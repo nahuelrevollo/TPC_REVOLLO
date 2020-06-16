@@ -22,10 +22,14 @@ namespace NEGOCIO_BL
 
             try
             {
-                Datos.SettearQuery("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.ImagenUrl,A.Precio,M.Id, M.Descripcion,C.Id, C.Descripcion,A.activo " +
+                Datos.SettearQuery("select A.Id, A.CODIGO, A.NOMBRE, A.DESCRIPCION, A.IMAGEN_URL,A.PRECIO,M.ID, M.DESCRIPCION,R.ID," +
+                    " R.DESCRIPCION,E.ID,E.DESCRIPCION,T_A.ID,T_A.TIPO,A.ACTIVO " +
                     "from ARTICULOS as A " +
-                    "inner join MARCAS as M on A.IdMArca=M.Id " +
-                    "inner join CATEGORIAS as C on A.IdCategoria=C.Id");
+                    "inner join MARCAS as M on A.ID_MARCA=M.ID " +
+                    "inner join RAZAS as R on A.IdRAZA=R.ID"+
+                    "inner join EDADES AS E ON A.ID_EDADES=E.ID"+
+                    "inner join TIPO_ANIMALES AS T_A ON A.ID_ANIMAL=T_A.ID"
+                    );
                 Datos.EjecutarLector();
 
 
@@ -34,7 +38,9 @@ namespace NEGOCIO_BL
                 {
                     Articulo aux = new Articulo();
                     aux.Marca = new Marca();
-                    aux.Categoria = new Categoria();
+                    aux.Raza = new Raza();
+                    aux.Edad = new Edades();
+                    aux.Animal = new Animal();
 
 
 
@@ -46,9 +52,13 @@ namespace NEGOCIO_BL
                     aux.Precio = (decimal)Datos.Lector[5];
                     aux.Marca.ID = Datos.Lector.GetInt32(6);
                     aux.Marca.Descripcion = Datos.Lector.GetString(7);
-                    aux.Categoria.ID = Datos.Lector.GetInt32(8);
-                    aux.Categoria.Descripcion = Datos.Lector.GetString(9);
-                    aux.Activo = Datos.Lector.GetBoolean(10);
+                    aux.Raza.ID = Datos.Lector.GetInt32(8);
+                    aux.Raza.Descripcion = Datos.Lector.GetString(9);
+                    aux.Edad.ID = Datos.Lector.GetInt32(10);
+                    aux.Edad.Descripcion = Datos.Lector.GetString(11); 
+                    aux.Animal.ID = Datos.Lector.GetInt32(12);
+                    aux.Animal.Descripcion = Datos.Lector.GetString(13);
+                    aux.Activo = Datos.Lector.GetBoolean(14);
 
 
 
@@ -84,13 +94,19 @@ namespace NEGOCIO_BL
             try
 
             {
-                datos.SettearQuery("update ARTICULOS set Codigo=@Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,ImagenUrl=@ImagenUrl,Precio=@Precio where id=@id");
+                datos.SettearQuery("update ARTICULOS set CODIGO=@Codigo,NOMBRE=@Nombre,DESCRIPCION=@Descripcion," +
+                    "ID_MARCA=@IdMarca,ID_ANIMAL=@IdAnimal,ID_RAZA=@IdRaza,ID_EDAD=@IdEdad," +
+                    "IMAGEN_URL=@ImagenUrl,Precio=@Precio where ID=@id");
+
+
                 datos.AgregarParametros("@Id", nuevo_art.ID);
                 datos.AgregarParametros("@Codigo", nuevo_art.Codigo);
                 datos.AgregarParametros("@Nombre", nuevo_art.Nombre);
                 datos.AgregarParametros("@Descripcion", nuevo_art.Descripcion);
                 datos.AgregarParametros("@IdMarca", nuevo_art.Marca.ID);
-                datos.AgregarParametros("@IdCategoria", nuevo_art.Categoria.ID);
+                datos.AgregarParametros("@IdAnimal", nuevo_art.Animal.ID);
+                datos.AgregarParametros("@IdRaza", nuevo_art.Raza.ID);
+                datos.AgregarParametros("@IdEdad", nuevo_art.Edad.ID);
                 datos.AgregarParametros("@ImagenUrl", nuevo_art.Imagen_Url);
                 datos.AgregarParametros("@Precio", nuevo_art.Precio);
 
@@ -113,7 +129,7 @@ namespace NEGOCIO_BL
 
             try
             {
-                datos.SettearQuery("Update ARTICULOS set activo=@Activo where Id=@ID");
+                datos.SettearQuery("Update ARTICULOS set ACTIVO=@Activo where ID=@ID");
                 datos.AgregarParametros("@Activo", 0);
                 datos.AgregarParametros("ID", iD);
 
@@ -141,16 +157,19 @@ namespace NEGOCIO_BL
 
             try
             {
-                conexion.ConnectionString = "data source = Paprika\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi";
+                conexion.ConnectionString = "data source = Paprika\\SQLEXPRESS; initial catalog = REVOLLO_DB; integrated security = sspi";
                 comando.Connection = conexion;
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Insert into ARTICULOS(Codigo,Nombre,Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio,activo) values(@Codigo,@Nombre,@Descripcion,@Marca,@Categoria,@ImagenUrl,@Precio,@activo)";
+                comando.CommandText = "Insert into ARTICULOS(CODIGO,NOMBRE,DESCRIPCION,ID_MARCA,ID_ANIMAL,ID_RAZA,ID_EDAD,IMAGEN_URL,PRECIO,ACTIVO)" +
+                    " values(@Codigo,@Nombre,@Descripcion,@Marca,@Animal,@Raza,@Edad,@ImagenUrl,@Precio,@activo)";
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@Codigo", nuevo_art.Codigo);
                 comando.Parameters.AddWithValue("@Nombre", nuevo_art.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion", nuevo_art.Descripcion);
                 comando.Parameters.AddWithValue("@Marca", nuevo_art.Marca.ID);
-                comando.Parameters.AddWithValue("@Categoria", nuevo_art.Categoria.ID);
+                comando.Parameters.AddWithValue("@Animal", nuevo_art.Animal.ID);
+                comando.Parameters.AddWithValue("@Raza", nuevo_art.Raza.ID);
+                comando.Parameters.AddWithValue("@Edad", nuevo_art.Edad.ID);
                 comando.Parameters.AddWithValue("@ImagenUrl", nuevo_art.Imagen_Url);
                 comando.Parameters.AddWithValue("@Precio", nuevo_art.Precio);
                 comando.Parameters.AddWithValue("@activo", 1);
