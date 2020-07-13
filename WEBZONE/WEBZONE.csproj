@@ -106,13 +106,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Administrador.aspx" />
+    <Content Include="Admin_ListAnimales.aspx" />
+    <Content Include="Admin_ListArticulos.aspx" />
+    <Content Include="Admin_ListEdades.aspx" />
+    <Content Include="Admin_ListMarcas.aspx" />
+    <Content Include="Admin_ListRazas.aspx" />
+    <Content Include="Animal_Modificado.aspx" />
+    <Content Include="Articulo_Modificado.aspx" />
+    <Content Include="Bienvenida.aspx" />
+    <Content Include="Carrito_Compra.aspx" />
+    <Content Include="CompraFinalizada.aspx" />
+    <Content Include="Compras_Usuario.aspx" />
+    <Content Include="Compra_Exitosa.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DefaultExpiroSesion.aspx" />
+    <Content Include="Descripcion.aspx" />
+    <Content Include="DetalleVenta_Admin.aspx" />
+    <Content Include="Detalle_Compra.aspx" />
+    <Content Include="Direccion_Envio.aspx" />
+    <Content Include="Edad_Modificada.aspx" />
+    <Content Include="Eliminar_Animal.aspx" />
+    <Content Include="Eliminar_Articulo.aspx" />
+    <Content Include="Eliminar_Edades.aspx" />
+    <Content Include="Eliminar_Marca.aspx" />
+    <Content Include="Eliminar_Raza.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -121,12 +140,33 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Admin_MP.Master" />
+    <Content Include="Bienvenida_logIng.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Listado_articulos.aspx" />
+    <Content Include="Listado_Articulos.aspx" />
+    <Content Include="Log_IN.aspx" />
+    <Content Include="Marca_Modificada.aspx" />
+    <Content Include="MisVentas.aspx" />
+    <Content Include="Modificar_Direccion.aspx" />
+    <Content Include="Modif_Animal.aspx" />
+    <Content Include="Modif_DatosAdmin.aspx" />
+    <Content Include="Modif_DatosPersonales.aspx" />
+    <Content Include="Modif_Edades.aspx" />
+    <Content Include="Modif_Marca.aspx" />
+    <Content Include="Modif_Articulo.aspx" />
+    <Content Include="Modif_Raza.aspx" />
+    <Content Include="Nueva_Direccion.aspx" />
+    <Content Include="Nueva_Marca.aspx" />
+    <Content Include="Nueva_Raza.aspx" />
+    <Content Include="Registro_Admin.aspx" />
+    <Content Include="Nuevo_Animal.aspx" />
+    <Content Include="Nuevo_Articulo.aspx" />
+    <Content Include="Nuevo_Edades.aspx" />
+    <Content Include="Perfil_Admin.aspx" />
+    <Content Include="Perfil_NuevaDireccion.aspx" />
+    <Content Include="Perfil_Usuario.aspx" />
+    <Content Include="Raza_Modificada.aspx" />
+    <Content Include="Registro_Usuario.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -162,6 +202,62 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador.aspx.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador.aspx.designer.cs">
+      <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ListAnimales.aspx.cs">
+      <DependentUpon>Admin_ListAnimales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ListAnimales.aspx.designer.cs">
+      <DependentUpon>Admin_ListAnimales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ListArticulos.aspx.cs">
+      <DependentUpon>Admin_ListArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ListArticulos.aspx.designer.cs">
+      <DependentUpon>Admin_ListArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ListEdades.aspx.cs">
+      <DependentUpon>Admin_ListEdades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ListEdades.aspx.designer.cs">
+      <DependentUpon>Admin_ListEdades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ListMarcas.aspx.cs">
+      <DependentUpon>Admin_ListMarcas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ListMarcas.aspx.designer.cs">
+      <DependentUpon>Admin_ListMarcas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ListRazas.aspx.cs">
+      <DependentUpon>Admin_ListRazas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ListRazas.aspx.designer.cs">
+      <DependentUpon>Admin_ListRazas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_MP.Master.cs">
+      <DependentUpon>Admin_MP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_MP.Master.designer.cs">
+      <DependentUpon>Admin_MP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Animal_Modificado.aspx.cs">
+      <DependentUpon>Animal_Modificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Animal_Modificado.aspx.designer.cs">
+      <DependentUpon>Animal_Modificado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -171,6 +267,55 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Articulo_Modificado.aspx.cs">
+      <DependentUpon>Articulo_Modificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Articulo_Modificado.aspx.designer.cs">
+      <DependentUpon>Articulo_Modificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida.aspx.cs">
+      <DependentUpon>Bienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bienvenida.aspx.designer.cs">
+      <DependentUpon>Bienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida_logIng.Master.cs">
+      <DependentUpon>Bienvenida_logIng.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bienvenida_logIng.Master.designer.cs">
+      <DependentUpon>Bienvenida_logIng.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito_Compra.aspx.cs">
+      <DependentUpon>Carrito_Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito_Compra.aspx.designer.cs">
+      <DependentUpon>Carrito_Compra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompraFinalizada.aspx.cs">
+      <DependentUpon>CompraFinalizada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompraFinalizada.aspx.designer.cs">
+      <DependentUpon>CompraFinalizada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras_Usuario.aspx.cs">
+      <DependentUpon>Compras_Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras_Usuario.aspx.designer.cs">
+      <DependentUpon>Compras_Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compra_Exitosa.aspx.cs">
+      <DependentUpon>Compra_Exitosa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compra_Exitosa.aspx.designer.cs">
+      <DependentUpon>Compra_Exitosa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,6 +330,83 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DefaultExpiroSesion.aspx.cs">
+      <DependentUpon>DefaultExpiroSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultExpiroSesion.aspx.designer.cs">
+      <DependentUpon>DefaultExpiroSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Descripcion.aspx.cs">
+      <DependentUpon>Descripcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Descripcion.aspx.designer.cs">
+      <DependentUpon>Descripcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleVenta_Admin.aspx.cs">
+      <DependentUpon>DetalleVenta_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleVenta_Admin.aspx.designer.cs">
+      <DependentUpon>DetalleVenta_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_Compra.aspx.cs">
+      <DependentUpon>Detalle_Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detalle_Compra.aspx.designer.cs">
+      <DependentUpon>Detalle_Compra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direccion_Envio.aspx.cs">
+      <DependentUpon>Direccion_Envio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direccion_Envio.aspx.designer.cs">
+      <DependentUpon>Direccion_Envio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edad_Modificada.aspx.cs">
+      <DependentUpon>Edad_Modificada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edad_Modificada.aspx.designer.cs">
+      <DependentUpon>Edad_Modificada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_Animal.aspx.cs">
+      <DependentUpon>Eliminar_Animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar_Animal.aspx.designer.cs">
+      <DependentUpon>Eliminar_Animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_Articulo.aspx.cs">
+      <DependentUpon>Eliminar_Articulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar_Articulo.aspx.designer.cs">
+      <DependentUpon>Eliminar_Articulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_Edades.aspx.cs">
+      <DependentUpon>Eliminar_Edades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar_Edades.aspx.designer.cs">
+      <DependentUpon>Eliminar_Edades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_Marca.aspx.cs">
+      <DependentUpon>Eliminar_Marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar_Marca.aspx.designer.cs">
+      <DependentUpon>Eliminar_Marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_Raza.aspx.cs">
+      <DependentUpon>Eliminar_Raza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eliminar_Raza.aspx.designer.cs">
+      <DependentUpon>Eliminar_Raza.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,14 +417,175 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Listado_articulos.aspx.cs">
-      <DependentUpon>Listado_articulos.aspx</DependentUpon>
+    <Compile Include="Listado_Articulos.aspx.cs">
+      <DependentUpon>Listado_Articulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Listado_articulos.aspx.designer.cs">
-      <DependentUpon>Listado_articulos.aspx</DependentUpon>
+    <Compile Include="Listado_Articulos.aspx.designer.cs">
+      <DependentUpon>Listado_Articulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log_IN.aspx.cs">
+      <DependentUpon>Log_IN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log_IN.aspx.designer.cs">
+      <DependentUpon>Log_IN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Marca_Modificada.aspx.cs">
+      <DependentUpon>Marca_Modificada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Marca_Modificada.aspx.designer.cs">
+      <DependentUpon>Marca_Modificada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisVentas.aspx.cs">
+      <DependentUpon>MisVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisVentas.aspx.designer.cs">
+      <DependentUpon>MisVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar_Direccion.aspx.cs">
+      <DependentUpon>Modificar_Direccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar_Direccion.aspx.designer.cs">
+      <DependentUpon>Modificar_Direccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_Animal.aspx.cs">
+      <DependentUpon>Modif_Animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_Animal.aspx.designer.cs">
+      <DependentUpon>Modif_Animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_DatosAdmin.aspx.cs">
+      <DependentUpon>Modif_DatosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_DatosAdmin.aspx.designer.cs">
+      <DependentUpon>Modif_DatosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_DatosPersonales.aspx.cs">
+      <DependentUpon>Modif_DatosPersonales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_DatosPersonales.aspx.designer.cs">
+      <DependentUpon>Modif_DatosPersonales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_Edades.aspx.cs">
+      <DependentUpon>Modif_Edades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_Edades.aspx.designer.cs">
+      <DependentUpon>Modif_Edades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_Marca.aspx.cs">
+      <DependentUpon>Modif_Marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_Marca.aspx.designer.cs">
+      <DependentUpon>Modif_Marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_Articulo.aspx.cs">
+      <DependentUpon>Modif_Articulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_Articulo.aspx.designer.cs">
+      <DependentUpon>Modif_Articulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modif_Raza.aspx.cs">
+      <DependentUpon>Modif_Raza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modif_Raza.aspx.designer.cs">
+      <DependentUpon>Modif_Raza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nueva_Direccion.aspx.cs">
+      <DependentUpon>Nueva_Direccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nueva_Direccion.aspx.designer.cs">
+      <DependentUpon>Nueva_Direccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nueva_Marca.aspx.cs">
+      <DependentUpon>Nueva_Marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nueva_Marca.aspx.designer.cs">
+      <DependentUpon>Nueva_Marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nueva_Raza.aspx.cs">
+      <DependentUpon>Nueva_Raza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nueva_Raza.aspx.designer.cs">
+      <DependentUpon>Nueva_Raza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Admin.aspx.cs">
+      <DependentUpon>Registro_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Admin.aspx.designer.cs">
+      <DependentUpon>Registro_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo_Animal.aspx.cs">
+      <DependentUpon>Nuevo_Animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nuevo_Animal.aspx.designer.cs">
+      <DependentUpon>Nuevo_Animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo_Articulo.aspx.cs">
+      <DependentUpon>Nuevo_Articulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nuevo_Articulo.aspx.designer.cs">
+      <DependentUpon>Nuevo_Articulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo_Edades.aspx.cs">
+      <DependentUpon>Nuevo_Edades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nuevo_Edades.aspx.designer.cs">
+      <DependentUpon>Nuevo_Edades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil_Admin.aspx.cs">
+      <DependentUpon>Perfil_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil_Admin.aspx.designer.cs">
+      <DependentUpon>Perfil_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil_NuevaDireccion.aspx.cs">
+      <DependentUpon>Perfil_NuevaDireccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil_NuevaDireccion.aspx.designer.cs">
+      <DependentUpon>Perfil_NuevaDireccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil_Usuario.aspx.cs">
+      <DependentUpon>Perfil_Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Perfil_Usuario.aspx.designer.cs">
+      <DependentUpon>Perfil_Usuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raza_Modificada.aspx.cs">
+      <DependentUpon>Raza_Modificada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Raza_Modificada.aspx.designer.cs">
+      <DependentUpon>Raza_Modificada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Usuario.aspx.cs">
+      <DependentUpon>Registro_Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Usuario.aspx.designer.cs">
+      <DependentUpon>Registro_Usuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,6 +610,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,7 +11,7 @@ namespace WEBZONE
 {
 
 
-    public partial class Listado_articulos
+    public partial class Listado_Articulos
     {
     }
 }

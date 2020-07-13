@@ -41,9 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL_Animal.cs" />
     <Compile Include="BL_Articulo.cs" />
+    <Compile Include="BL_ArticuloxVenta.cs" />
+    <Compile Include="BL_Direccion.cs" />
+    <Compile Include="BL_Edades.cs" />
+    <Compile Include="BL_MisCompras.cs" />
+    <Compile Include="BL_Pais.cs" />
+    <Compile Include="BL_PrecioyStock.cs" />
+    <Compile Include="BL_Provincia.cs" />
     <Compile Include="BL_Raza.cs" />
     <Compile Include="BL_Marca.cs" />
+    <Compile Include="BL_ReporteMensual.cs" />
+    <Compile Include="BL_Usuario.cs" />
+    <Compile Include="BL_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

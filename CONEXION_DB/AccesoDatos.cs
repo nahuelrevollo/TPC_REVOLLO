@@ -53,10 +53,15 @@ namespace CONEXION_DB
         {
 
 
+            Comando.CommandType = System.Data.CommandType.StoredProcedure;
+            Comando.CommandText = Sp;
+
+
         }
 
         public void AgregarParametros(string nombre, object valor)
         {
+            
             Comando.Parameters.AddWithValue(nombre, valor);
         }
 

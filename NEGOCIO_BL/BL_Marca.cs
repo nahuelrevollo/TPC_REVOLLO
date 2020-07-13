@@ -24,7 +24,7 @@ namespace NEGOCIO_BL
                 conexion.ConnectionString = "data source = Paprika\\SQLEXPRESS; initial catalog = REVOLLO_DB; integrated security = sspi";
                 comando.Connection = conexion;
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Insert into MARCAS(DESCRIPCION,ACTIVO) values(@Descripcion,@activo)";
+                comando.CommandText = "Insert into Marcas(Nombre,Activo) values(@Descripcion,@activo)";
                 comando.Parameters.Clear();
 
                 comando.Parameters.AddWithValue("@Descripcion", marca.Descripcion);
@@ -53,7 +53,7 @@ namespace NEGOCIO_BL
 
             try
             {
-                datos.SettearQuery("Update MARCAS set ACTIVO=@Activo where ID=@ID");
+                datos.SettearQuery("Update Marcas set Activo=@Activo where ID=@ID");
                 datos.AgregarParametros("@Activo", 0);
                 datos.AgregarParametros("ID", iD);
 
@@ -79,7 +79,7 @@ namespace NEGOCIO_BL
             try
             {
 
-                Datos.SettearQuery("select ID, DESCRIPCION, ACTIVO from MARCAS ");
+                Datos.SettearQuery("select ID, Nombre, Activo from Marcas");
                 Datos.EjecutarLector();
 
                 while (Datos.Lector.Read())
@@ -125,7 +125,7 @@ namespace NEGOCIO_BL
             try
 
             {
-                datos.SettearQuery("update MARCAS set DESCRIPCION=@Descripcion where ID=@id");
+                datos.SettearQuery("update Marcas set Nombre=@Descripcion where ID=@id");
                 datos.AgregarParametros("@Id", marca.ID);
                 datos.AgregarParametros("@Descripcion", marca.Descripcion);
 
